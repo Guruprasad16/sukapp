@@ -1,0 +1,145 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #5370a8;
+    color: white;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+    
+  }
+
+  .upload_button{
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+  .upload_button input{
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 14px;
+    background-color:rgb(220, 223, 223);
+  }
+  .upload_button button{
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  /* Hide the default dropdown arrow */
+#sheet-selection {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color:rgb(220, 223, 223);
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 48px;
+    margin-right: 20px;
+    width: 170px;
+  }
+  
+  /* Style the dropdown arrow */
+  #sheet-selection::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    pointer-events: none;
+  }
+  
+  /* Dropdown styles on hover */
+  #sheet-selection:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Dropdown styles when open */
+  #sheet-selection:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007bff;
+    background-color: #fff;
+  }
+  
+  /* Style the dropdown options */
+  #sheet-selection option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Hover effect for dropdown options */
+  #sheet-selection option:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Selected option style */
+  #sheet-selection option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .Continue{
+    margin-left: 87%;
+    margin-bottom: 10px;
+  }
+  th {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color: #212e49;
+
+  }
+
+.table-bordered{
+    font-size: 13px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #d3d6db;
+    color: white;
+    font-weight: 500;
+}
+.footer p{
+    font-size: 12px;
+    color: rgb(87, 84, 84);
+    margin-left: 10px;
+}
+
+
+
+body{
+
+    background-color: #eee; 
+}
+
+table th , table td{
+    text-align: center;
+}
+
+table tr:nth-child(even){
+    background-color: #d5e4e4
+}
+
+.pagination li:hover{
+    cursor: pointer;
+}
+		table tbody tr {
+			display: none;
+		}

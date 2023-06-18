@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cateogry Consolidation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .scrollable-body {
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        .fixed-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+        }
+
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .upload-container {
+            background-color: #f8f8f8;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .upload-image-container {
+            position: relative;
+            width: 500px;
+            height: 200px;
+            margin-bottom: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upload-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: rgba(173, 216, 230, 0.3);
+        }
+
+        .upload-image {
+            width: 42px;
+            height: 42px;
+        }
+
+        .upload-image h1 {
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!------- Toolbar ----->
+    <div class="toolbar" role="banner">
+        <img width="90px" height="27px" alt="jk-tech-logo"
+            src="https://jktech.azureedge.net/wp-content/themes/jktechnosoft/images/logo.png" />
+    </div>
+
+    <!-- Main Code -->
+    <div class="container centered">
+        <div id="uploadDiv" class="upload-container">
+            <label for="file-input" class="upload-image-container">
+                <div class="upload-circle"></div>
+                <img src="static/File_42px.png" alt="Upload Image" id="upload-img" class="upload-image">
+            </label>
+            <h1 style="font-size: 12px;">Upload your Excel File</h1>
+            <input type="file" id="file-input" name="file" accept=".xls,.xlsx" style="display: none;">
+            <select id="sheet-selection" class="dropdown hidden">
+                <option disabled selected>Select the file </option>
+            </select>
+            <button id="submit-sheet" class="hidden btn btn-primary">Submit</button>
+        </div>
+
+       
+        <div class="table-responsive hidden" id="table-container">
+            
+
+            <button id="submit-column" class="hidden btn btn-primary Continue">Continue</button>
+            <table id="column-selection" class="table table-bordered hidden">
+                <thead id="table-header" class="fixed-header"></thead>
+                <tbody id="tableBody" class="scrollable-body"></tbody>
+            </table>
+
+            <!-- <div class='pagination-container' >
+				<nav>
+				  <ul class="pagination">
+            <li data-page="prev" >
+								     <span>  <span class="sr-only">(current)</span></span>
+								    </li>
+				   
+        <li data-page="next" id="prev">
+								       <span>  <span class="sr-only">(current)</span></span>
+								    </li>
+				  </ul>
+				</nav>
+			</div> -->
+        </div>
+    </div>
+    
+    
+
+    
+    <!-- <div class="footer" role="banner">
+        <p class="p-1 text-center mb-0">Copyright &copy; 2023 JK Tech</a>. All rights reserved.</p>
+        <img width="70px" height="17px" alt="jk-tech-logo"
+            src="https://jktech.azureedge.net/wp-content/themes/jktechnosoft/images/logo.png"
+            style="margin-left: 73%;" />
+        
+    </div> -->
+
+    <footer>
+        
+      </footer>
+</body>
+
+</html>

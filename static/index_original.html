@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cateogry Consolidation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .scrollable-body {
+            height: 400px;
+            overflow-y: auto;
+        }
+
+        .fixed-header {
+            position: sticky;
+            top: 0;
+            background-color: white;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!------- Toolbar ----->
+    <div class="toolbar" role="banner">
+        <img width="90px" height="27px" alt="jk-tech-logo"
+            src="https://jktech.azureedge.net/wp-content/themes/jktechnosoft/images/logo.png" />
+    </div>
+    <!---- Main Code ---->
+    <br><br>
+    <div class="container">
+        <div id="uploadDiv">
+            <h1>Upload your Excel File</h1>
+            <form id="upload-form" class="upload_button">
+                <input type="file" id="file-input" name="file" accept=".xls,.xlsx">
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <br>
+            <select id="sheet-selection" class="dropdown">
+                <option disabled selected>Select the file </option>
+            </select>
+            <button id="submit-sheet" class="hidden btn btn-primary">Submit</button>
+        </div>
+
+       
+        <div class="table-responsive" id="table-container">
+            
+
+            <button id="submit-column" class="hidden btn btn-primary Continue">Continue</button>
+            <table id="column-selection" class="table table-bordered hidden">
+                <thead id="table-header" class="fixed-header"></thead>
+                <tbody id="tableBody" class="scrollable-body"></tbody>
+            </table>
+
+            <!-- <div class='pagination-container' >
+				<nav>
+				  <ul class="pagination">
+            <li data-page="prev" >
+								     <span>  <span class="sr-only">(current)</span></span>
+								    </li>
+				   
+        <li data-page="next" id="prev">
+								       <span>  <span class="sr-only">(current)</span></span>
+								    </li>
+				  </ul>
+				</nav>
+			</div> -->
+        </div>
+    </div>
+    
+    
+
+    
+    <!-- <div class="footer" role="banner">
+        <p class="p-1 text-center mb-0">Copyright &copy; 2023 JK Tech</a>. All rights reserved.</p>
+        <img width="70px" height="17px" alt="jk-tech-logo"
+            src="https://jktech.azureedge.net/wp-content/themes/jktechnosoft/images/logo.png"
+            style="margin-left: 73%;" />
+        
+    </div> -->
+
+    <footer>
+        
+      </footer>
+</body>
+
+</html>
