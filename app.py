@@ -5,7 +5,7 @@ import openai
 import requests
 from flask import render_template
 from pandas import DataFrame
-# import tiktoken
+
 
 
 
@@ -151,9 +151,6 @@ def make_api_request():
     response_text = response.choices[0].text.strip()
 
     return jsonify(response_text)
-
-
-   
 
 
 
