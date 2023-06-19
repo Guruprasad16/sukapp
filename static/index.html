@@ -133,7 +133,8 @@
                 formData.append('file', file);
 
                 // Send a POST request to the upload endpoint
-                fetch('/upload', {
+                fetch( {
+                    url: 'http://13.234.148.242:5000/upload',
                     method: 'POST',
                     body: formData
                 })
